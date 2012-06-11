@@ -1,0 +1,606 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MainForm</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>MainForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>734</width>
+            <height>563</height>
+        </rect>
+    </property>
+    <property name="cursor">
+        <cursor>0</cursor>
+    </property>
+    <property name="caption">
+        <string>Phr@X</string>
+    </property>
+    <property name="dockWindowsMovable">
+        <bool>false</bool>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string></string>
+    </property>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <item text="&amp;File" name="fileMenu">
+        <action name="fileOpenAction"/>
+        <separator/>
+        <action name="fileSaveAction"/>
+        <action name="fileSaveAsAction"/>
+        <action name="fileSaveImageAction"/>
+        <item text="Save Image" name="popupMenu_5" accel="">
+            <action name="fileSaveImageJPEGAction"/>
+            <action name="fileSaveImagePNGAction"/>
+        </item>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="F&amp;ractal" name="Fractal">
+        <action name="fractalResetAction"/>
+        <separator/>
+        <actiongroup name="fractalActionGroup"/>
+        <item text="Select Fractal" name="popupMenu_12" accel="">
+            <action name="mandel1Action"/>
+            <action name="mandel2Action"/>
+            <action name="mandel3Action"/>
+            <action name="mandel4Action"/>
+            <action name="mandel5Action"/>
+            <separator/>
+            <action name="julia1Action"/>
+            <action name="julia2Action"/>
+            <action name="julia3Action"/>
+            <action name="julia4Action"/>
+            <action name="julia5Action"/>
+        </item>
+    </item>
+    <item text="&amp;Help" name="Help">
+        <action name="helpAction"/>
+        <item text="Phr@X Help" name="popupMenu_24" accel="">
+            <action name="quickHelpAction"/>
+            <action name="helpContentsAction"/>
+        </item>
+        <separator/>
+        <action name="aboutAction"/>
+        <action name="helpAboutPhraxAction"/>
+        <separator/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>fileToolBar</cstring>
+        </property>
+        <property name="mouseTracking">
+            <bool>true</bool>
+        </property>
+        <property name="label">
+            <string>Tools</string>
+        </property>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <action name="fileSaveAsAction"/>
+        <separator/>
+        <action name="fractalResetAction"/>
+        <separator/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileOpenAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>stock-open.png</iconset>
+        </property>
+        <property name="text">
+            <string>Open</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Open...</string>
+        </property>
+        <property name="toolTip">
+            <string>Open</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to open a fractal.  Only fractals in &lt;b&gt;XML&lt;/b&gt; formats can be opened.  You can also select the &lt;b&gt;Open &lt;/b&gt;option in the &lt;b&gt;File &lt;/b&gt;menu.</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+O</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAction</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="iconSet">
+            <iconset>gtk-save.png</iconset>
+        </property>
+        <property name="text">
+            <string>Save</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Save</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to save your fractal in the &lt;b&gt;XML &lt;/b&gt;format.  You can also select the &lt;b&gt;Save&lt;/b&gt; option from the &lt;b&gt;File &lt;/b&gt;menu.</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>panel-logout.png</iconset>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to exit &lt;i&gt;&lt;b&gt;Phr@X&lt;/b&gt;&lt;/i&gt;.</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAction</cstring>
+        </property>
+        <property name="text">
+            <string>Phr@X Help</string>
+        </property>
+        <property name="menuText">
+            <string>Phr@X Help</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to have a quick &lt;b&gt;Help &lt;/b&gt;on how to use &lt;i&gt;&lt;b&gt;Phr@X&lt;/b&gt;&lt;/i&gt;.</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveImageAction</cstring>
+        </property>
+        <property name="text">
+            <string>Action</string>
+        </property>
+        <property name="menuText">
+            <string>Save Image</string>
+        </property>
+        <property name="statusTip">
+            <string>Save Image</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveImageJPEGAction</cstring>
+        </property>
+        <property name="text">
+            <string>JPEG</string>
+        </property>
+        <property name="menuText">
+            <string>JPEG</string>
+        </property>
+        <property name="statusTip">
+            <string>Save image as JPEG</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to save your fractal in the &lt;b&gt;JPEG&lt;/b&gt; format</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveImagePNGAction</cstring>
+        </property>
+        <property name="text">
+            <string>PNG</string>
+        </property>
+        <property name="menuText">
+            <string>PNG</string>
+        </property>
+        <property name="statusTip">
+            <string>Save Image as PNG</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to save your fractal as in the &lt;b&gt;PNG &lt;/b&gt;format.</string>
+        </property>
+    </action>
+    <actiongroup>
+        <property name="name">
+            <cstring>fractalActionGroup</cstring>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>ActionGroup</string>
+        </property>
+        <property name="menuText">
+            <string>Select Fractal</string>
+        </property>
+        <property name="usesDropDown">
+            <bool>true</bool>
+        </property>
+        <action>
+            <property name="name">
+                <cstring>mandel1Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="on">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Mandelbrot Type 1</string>
+            </property>
+            <property name="toolTip">
+                <string>View the Mandelbrot Fractal</string>
+            </property>
+            <property name="whatsThis">
+                <string>Click this button to select the &lt;b&gt;Mandelbrot Set - Type 1&lt;/b&gt;.</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>julia1Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="on">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Julia Type 1</string>
+            </property>
+            <property name="statusTip">
+                <string>View the Julia Fractal</string>
+            </property>
+            <property name="whatsThis">
+                <string>Click this button to select the &lt;b&gt;Julia Set - Type 1&lt;/b&gt;.</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>julia2Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Julia Type 2</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>mandel2Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Mandelbrot Type 2</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>mandel3Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Mandelbrot Type 3</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>mandel4Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Mandelbrot Type 4</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>mandel5Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Mandelbrot Type 5</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>julia3Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Julia Type 3</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>julia4Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Julia Type 4</string>
+            </property>
+        </action>
+        <action>
+            <property name="name">
+                <cstring>julia5Action</cstring>
+            </property>
+            <property name="toggleAction">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Action</string>
+            </property>
+            <property name="menuText">
+                <string>Julia Type 5</string>
+            </property>
+        </action>
+    </actiongroup>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAsAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>gtk-save-as.png</iconset>
+        </property>
+        <property name="text">
+            <string>Save As</string>
+        </property>
+        <property name="menuText">
+            <string>Save &amp;As...</string>
+        </property>
+        <property name="statusTip">
+            <string>Save As (Ctrl+Shift+S)</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button to save your fractal in the XML format.  You can also select the &lt;b&gt;Save As&lt;/b&gt; option from the &lt;b&gt;File &lt;/b&gt;menu.</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+Shift+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fractalResetAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>gtk-refresh.png</iconset>
+        </property>
+        <property name="text">
+            <string>Reset</string>
+        </property>
+        <property name="menuText">
+            <string>Reset</string>
+        </property>
+        <property name="whatsThis">
+            <string>Click this button when you want to reset the fractal to its original state.  You can also select the &lt;b&gt;Reset &lt;/b&gt;option from the &lt;b&gt;Fractal&lt;/b&gt; menu.</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutPhraxAction</cstring>
+        </property>
+        <property name="text">
+            <string>About Phr@X</string>
+        </property>
+        <property name="menuText">
+            <string>About Phr@X</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>quickHelpAction</cstring>
+        </property>
+        <property name="text">
+            <string>Phr@X Quick Help</string>
+        </property>
+        <property name="menuText">
+            <string>Phr@X Quick Help</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpContentsAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>handbook.png</iconset>
+        </property>
+        <property name="text">
+            <string>Phr@X User Manual</string>
+        </property>
+        <property name="menuText">
+            <string>Phr@X User Manual</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>aboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>Action</string>
+        </property>
+        <property name="menuText">
+            <string>About</string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>fileOpenAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileOpen()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSave()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>helpAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>helpContents()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveImageAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSaveImage()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveImageJPEGAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSaveJPEG()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveImagePNGAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSavePNG()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAsAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileSaveAs()</slot>
+    </connection>
+    <connection>
+        <sender>fractalActionGroup</sender>
+        <signal>selected(QAction*)</signal>
+        <receiver>MainForm</receiver>
+        <slot>selectType(QAction*)</slot>
+    </connection>
+    <connection>
+        <sender>fractalResetAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fractalReset()</slot>
+    </connection>
+    <connection>
+        <sender>helpContentsAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>helpContents()</slot>
+    </connection>
+    <connection>
+        <sender>quickHelpAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>quickHelp()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutPhraxAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>aboutPhrax()</slot>
+    </connection>
+    <connection>
+        <sender>aboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>about()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">qapplication.h</include>
+    <include location="local" impldecl="in implementation">mainform.ui.h</include>
+</includes>
+<slots>
+    <slot>fileOpen()</slot>
+    <slot>fileSave()</slot>
+    <slot>fileExit()</slot>
+    <slot>helpContents()</slot>
+    <slot>fileSaveImage()</slot>
+    <slot>fileSaveJPEG()</slot>
+    <slot>fileSavePNG()</slot>
+    <slot>fileSaveAs()</slot>
+    <slot>selectType( QAction * )</slot>
+    <slot>fractalReset()</slot>
+    <slot>quickHelp()</slot>
+    <slot>aboutPhrax()</slot>
+    <slot>closeEvent( QCloseEvent * )</slot>
+    <slot>about()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

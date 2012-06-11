@@ -1,0 +1,14 @@
+Phrax is a fractal explorer which runs on a cluster of MPI nodes
+in order to increase performance.
+
+Phrax has been written in C++ and uses the Qt library and therefore
+is portable across all sorts of operating systems.
+
+Phrax has been written by Imtiaz Ellaheebuksh and another student for
+their final project for BSc (Hons) degree in Computer Science and
+Engineering at the University of Mauritius under the supervision
+of Avinash Meetoo <avinash@noulakaz.net>
+
+Phrax is released under GPL 2.0
+
+8 June 2006

@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/phrax-index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Phr@X Help - Mandelbrot Set</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.css-help {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+-->
+</style>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+<table width="100%" height="559" border="0">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td height="54" colspan="3"> <h1 align="center"><em><strong><font color="#666666" size="7">Phr@X</font></strong></em></h1>
+      <hr></td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3"> <div align="center"> 
+        <table width="323" border="0">
+          <!-- InstanceBeginEditable name="EditRegion11" -->
+          <tr> 
+            <td width="150" rowspan="8"><img src="phrax_help_files/mandelbrot.jpg" width="150" height="150"></td>
+            <td width="134"><font size="2" face="Arial, Helvetica, sans-serif"><a href="home.htm">Home</a></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="whatAreFractals.htm">What 
+              are Fractals</a></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="examplesOfFractals.htm">Examples 
+              of Fractals</a></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="fractalsInNature.htm">Fractals 
+              in Nature</a></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="complexNumbers.htm">Complex 
+              Numbers</a></font></td>
+          </tr>
+          <tr> 
+            <td><p><font size="2" face="Arial, Helvetica, sans-serif">Mandelbrot 
+                Set</font></p></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="juliaSet.htm">Julia 
+              Set</a></font></td>
+          </tr>
+          <tr> 
+            <td><font size="2" face="Arial, Helvetica, sans-serif"><a href="howToUsePhr@X.htm">How 
+              to Use Phr@X</a></font></td>
+          </tr>
+          <!-- InstanceEndEditable --> 
+        </table>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="23" colspan="3"><font color="#0000FF" size="4" face="Arial, Helvetica, sans-serif">&nbsp;</font></td>
+  </tr>
+  <tr> <!-- InstanceBeginEditable name="EditRegion7" --> 
+    <td height="21" colspan="5" bgcolor="#99CCFF"><font color="#FFFFFF" size="4" face="Arial, Helvetica, sans-serif"><font color="#FFFFFF" size="4" face="Arial, Helvetica, sans-serif"><font color="#FFFFFF" size="4" face="Arial, Helvetica, sans-serif"><font color="#FFFFFF" size="4" face="Arial, Helvetica, sans-serif"><font color="#FFFFFF" size="4" face="Arial, Helvetica, sans-serif"><strong>Mandelbrot 
+      Set </strong></font></font></font></font></font></td>
+    <!-- InstanceEndEditable --></tr>
+  <tr> 
+    <td height="22" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> <!-- InstanceBeginEditable name="EditRegion8" --> 
+    <td height="21" colspan="5"> <h1 align="justify"><font size="3" face="Arial, Helvetica, sans-serif"><strong>What 
+        is the Mandelbrot Set?</strong></font></h1>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">The 
+        Mandelbrot set is the domain of convergence of the series built up by 
+        the complex sequence defined by the recursion law: </font></p>
+      <p align="center"><img src="phrax_help_files/Picture15.jpg" width="107" height="36"></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">In 
+        other words, with a simple algorithm it is possible to separate the points 
+        of the complex plane into two categories: </font></p>
+      <ul>
+        <li><font size="2" face="Arial, Helvetica, sans-serif">Points inside the 
+          Mandelbrot set <br>
+          </font></li>
+        <li><font size="2" face="Arial, Helvetica, sans-serif">Points outside 
+          the Mandelbrot set</font></li>
+      </ul>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Figure 
+        5.1 shows a portion of the complex plane. The points inside the Mandelbrot 
+        set have been coloured black.</font></p>
+      <p align="justify">&nbsp;</p>
+      <p align="center"><img src="phrax_help_files/pointsInsideMandel.jpg" width="320" height="240"></p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif">Figure 
+        5.1 - Points inside the Mandelbrot Set</font></strong></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">It 
+        is also possible to assign a colour to the points outside the Mandelbrot 
+        set. Their colour depends on how many iterations have been required to 
+        determine that they are outside the Mandelbrot set, and it can be interpreted 
+        as their &quot;distance&quot; from the Mandelbrot set. </font></p>
+      <p align="center"><img src="phrax_help_files/pointsInsideMandelColor.jpg" width="320" height="240"></p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif">Figure 
+        5.2 &#8211; Points inside and outside the Mandelbrot Set</font></strong></p>
+      <p align="center">&nbsp;</p>
+      <p align="left"><strong><font size="3" face="Arial, Helvetica, sans-serif">How 
+        is a Mandelbrot Set Built ?</font></strong></p>
+      <p align="justify"><br>
+        <font size="2" face="Arial, Helvetica, sans-serif">Pick a point on the 
+        complex plane (let&#8217;s call it <font color="#990000" size="3"><strong><em>C</em></strong></font>). 
+        The corresponding complex number has the form: </font></p>
+      <p align="center"><img src="phrax_help_files/Picture3.jpg" width="230" height="25"></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Calculate 
+        the value of this expression: </font></p>
+      <p align="center"><img src="phrax_help_files/Picture16.jpg" width="52" height="29"><strong><font size="5"> 
+        ,</font></strong></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">using 
+        zero as the value of <strong><em><font color="#990000" size="3">Z</font></em></strong>. 
+        The result is obviously <font color="#990000" size="3"><strong><em>C</em></strong></font>. 
+        Assign the result to <strong><em><font color="#990000" size="3">Z</font></em></strong> 
+        and repeat the calculation: now the result is the complex number </font></p>
+      <p align="center"><img src="phrax_help_files/Picture17.jpg" width="63" height="27"></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Assign 
+        the value to <strong><em><font color="#990000" size="3">Z</font></em></strong> 
+        and repeat the process again and again. In mathematical terms, this is 
+        the iteration of the function </font></p>
+      <p align="center"><img src="phrax_help_files/Picture15.jpg" width="107" height="36"></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">When 
+        we repeatedly iterate the function, the point may either remain near to 
+        the origin or go away from it, increasing its distance from the origin 
+        without limit. In the first case, we say that <font color="#990000" size="3"><strong><em>C</em></strong></font> 
+        belongs to the Mandelbrot set (it is one of the black points in the image); 
+        otherwise, we say that it goes to infinity and we assign a colour to <font color="#990000" size="3"><strong><em>C</em></strong></font> 
+        depending on the speed the point &quot;escapes&quot; from the origin. 
+        </font></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Let's 
+        take a look to the algorithm from a different point of view. Let's imagine 
+        that all the points on the plane are attracted both by infinity and by 
+        the Mandelbrot set. This makes it easy to understand why </font></p>
+      <ul>
+        <li><font size="2" face="Arial, Helvetica, sans-serif" align="justify"> 
+          points far from the Mandelbrot set rapidly move towards infinity</font></li>
+        <li><font size="2" face="Arial, Helvetica, sans-serif" align="justify"> 
+          points close to the Mandelbrot set slowly escape to infinity </font></li>
+        <li><font size="2" face="Arial, Helvetica, sans-serif" align="justify"> 
+          points inside the Mandelbrot set never escape to infinity</font></li>
+      </ul>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif"> As 
+        we can see, it is impossible to apply the process described above, because 
+        we can't iterate the function an infinite number of times to see whether 
+        or not the point goes to infinity. It's easy to prove that if the distance 
+        of the point from the origin becomes greater than 2, it will grow without 
+        limit. As a result of this, if the distance of the point from the origin 
+        reaches the value of two we can stop the iteration process, because we 
+        know that the point will go to infinity, and we can assign a colour to 
+        it according to the number of iterations performed (a small number of 
+        iterations means that the point is rapidly going to infinity).</font></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">On 
+        the other hand, if the point belongs to the Mandelbrot set, its distance 
+        from the origin will never become greater than 2, no matter how many iterations 
+        we do. Even if the point does not belong to the Mandelbrot set, it could 
+        take a really huge number of iterations to reveal that it will escape 
+        to infinity. In either case, we set a maximum number of iterations, after 
+        which we assume it is part of the set (and we paint it black).</font></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">The 
+        more iterations we use, the more detailed our image will be, but the longer 
+        it will take to generate.</font></p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><font size="3" face="Arial, Helvetica, sans-serif"><strong>Examples 
+        of the Mandelbrot Set</strong></font></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Let's 
+        see how to assign a colour to a particular point of the plane. Let's start 
+        with a point outside the Mandelbrot set: <em><font color="#990000" size="3"><strong>C 
+        = -0.5 + i</strong></font></em>.</font></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif"> (this 
+        means that the <font color="#990000" size="3"><em><strong>x_coordinate</strong></em></font> 
+        of <font color="#990000" size="3"><strong><em>C</em></strong></font> is 
+        -0.5 and the <font color="#990000" size="3"><em><strong>y_coordinate</strong></em></font> 
+        of <font color="#990000" size="3"><strong><em>C</em></strong></font> is 
+        1).</font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">Iterating the function </font></p>
+      <p align="center"><img src="phrax_help_files/Picture15.jpg" width="107" height="36"></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">will produce the following 
+        values: (the image shows the corresponding points on the complex plane).</font></p>
+      <p align="center"><img src="phrax_help_files/Table1.jpg" width="413" height="221"></p>
+      <p align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>Figure 
+        5.3 &#8211; The first 3 iterations with C = -0.5 + I (outside Mandelbrot 
+        Set)</strong></font></p>
+      <p align="center">&nbsp;</p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif"><img src="phrax_help_files/iterationsInMandel.jpg" width="320" height="390"></font></strong></p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif">Figure 
+        5.4 &#8211; The first 3 iterations with C = -0.5 + I (outside Mandelbrot 
+        Set)<br>
+        </font></strong></p>
+      <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">At 
+        the third iteration, the distance of the point from the origin becomes 
+        greater than 2. This means that the initial point <font color="#990000" size="3"><strong><em>C</em></strong></font> 
+        does not belong to the Mandelbrot set. All the points with the same colour 
+        require the same number of iterations to reveal that they are attracted 
+        by infinity. </font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">If we repeat the same 
+        process with a point inside the Mandelbrot set: <font color="#990033" size="3"><strong><em>C 
+        = 0.2 + i * 0.5</em></strong></font>.</font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">In this case, the 
+        distance of the point from the origin never becomes greater than two. 
+        When we reach the maximum number of iterations (for example, 200), we 
+        assume that the initial point <font color="#990000" size="3"><strong><em>C</em></strong></font> 
+        belongs to the Mandelbrot set and we paint it black. </font></p>
+      <p>&nbsp;</p>
+      <p align="center"><img src="phrax_help_files/Table2.jpg" width="378" height="357"></p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif">Figure 
+        5.5 &#8211; The first 7 iterations with C = 0.2 + i * 0.5</font></strong></p>
+      <p align="center">&nbsp;</p>
+      <p align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif"><img src="phrax_help_files/iterationsInMandel7.jpg" width="320" height="228"></font></strong></p>
+      <p align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>Figure 
+        5. 6 - The first 7 iterations with C = 0.2 + i * 0.5</strong></font></p>
+      <p align="center">&nbsp;</p>
+      </td>
+    <!-- InstanceEndEditable --></tr>
+  <tr> 
+    <td height="21" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="256" height="21"><!-- InstanceBeginEditable name="EditRegion9" --><a href="complexNumbers.htm"><font size="2" face="Arial, Helvetica, sans-serif">Previous</font></a><font size="2" face="Arial, Helvetica, sans-serif">: 
+      Complex Numbers</font><!-- InstanceEndEditable --></td>
+    <td width="266" height="21"><!-- InstanceBeginEditable name="EditRegion10" -->
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="mandelbrotSet.htm" target="_top">Top</a></font></div>
+      <!-- InstanceEndEditable --></td>
+    <td width="233" height="21"><div align="right"><!-- InstanceBeginEditable name="EditRegion12" --> 
+        <a href="juliaSet.htm"><font size="2" face="Arial, Helvetica, sans-serif">Next</font></a><font size="2" face="Arial, Helvetica, sans-serif">: 
+        Julia Set</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="21" colspan="3"><div align="right"><em><font size="2" face="Arial, Helvetica, sans-serif">Copyright 
+        &copy; 2006, Imtiaz Ellaheebuksh and another student</font></em></div></td>
+  </tr>
+  <tr> 
+    <td height="3"><img src="spacer.gif" alt="" width="256" height="1"></td>
+    <td><img src="spacer.gif" alt="" width="168" height="1"></td>
+    <td></td>
+  </tr>
+</table>
+<p>&nbsp;</p></body>
+<!-- InstanceEnd --></html>
